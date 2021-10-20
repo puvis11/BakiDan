@@ -1,12 +1,13 @@
 --Made By Danza007
+
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local CenterHub = Instance.new("TextButton")
 local XenonHub = Instance.new("TextButton")
 local TextButton = Instance.new("TextButton")
+local Aimbot = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
-local TextButton_3 = Instance.new("TextButton")
 local SwordHub = Instance.new("TextButton")
 local Close = Instance.new("TextButton")
 local Openmain = Instance.new("Frame")
@@ -83,14 +84,18 @@ TextButton_2.Text = "ComingSoon"
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 14.000
 
-TextButton_3.Parent = main
-TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.Position = UDim2.new(0.687853098, 0, 0.543417394, 0)
-TextButton_3.Size = UDim2.new(0, 200, 0, 50)
-TextButton_3.Font = Enum.Font.SourceSansBold
-TextButton_3.Text = "ComingSoon"
-TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.TextSize = 14.000
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = main
+Aimbot.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Aimbot.Position = UDim2.new(0.036723163, 0, 0.543417394, 0)
+Aimbot.Size = UDim2.new(0, 200, 0, 50)
+Aimbot.Font = Enum.Font.SourceSansBold
+Aimbot.Text = "Aimbot"
+Aimbot.TextColor3 = Color3.fromRGB(2, 255, 255)
+Aimbot.TextSize = 51.000
+Aimbot.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/puvis11/puvis11/2fbf0ef9f45944b51f3fcbeaab1a7aa8504215b8/Aimbot"))()
+end)
 
 SwordHub.Name = "SwordHub"
 SwordHub.Parent = main
@@ -102,7 +107,7 @@ SwordHub.Text = "SwordHub"
 SwordHub.TextColor3 = Color3.fromRGB(255, 0, 4)
 SwordHub.TextSize = 46.000
 SwordHub.MouseButton1Click:connect(function()
-	loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/CENTER-HUB/main/Blox%20Fruits"))()
 end)
 
 Close.Name = "Close"
