@@ -1,24 +1,19 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
+--Made By Danza007
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
+local CenterHub = Instance.new("TextButton")
 local XenonHub = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
-local TextButton_4 = Instance.new("TextButton")
-local TextButton_5 = Instance.new("TextButton")
-local TextButton_6 = Instance.new("TextButton")
+local SwordHub = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
 local Openmain = Instance.new("Frame")
 local Open = Instance.new("TextButton")
 
 --Properties:
 ScreenGui.Parent = game.CoreGui 
-
 
 main.Name = "main"
 main.Parent = ScreenGui
@@ -40,14 +35,19 @@ title.Text = "DanHub"
 title.TextColor3 = Color3.fromRGB(190, 26, 255)
 title.TextSize = 51.000
 
-TextButton.Parent = main
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.358757079, 0, 0.207282931, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "ComingSoon"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
+CenterHub.Name = "CenterHub"
+CenterHub.Parent = main
+CenterHub.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+CenterHub.Position = UDim2.new(0.358757079, 0, 0.207282931, 0)
+CenterHub.Size = UDim2.new(0, 200, 0, 50)
+CenterHub.Font = Enum.Font.SourceSansBold
+CenterHub.Text = "CenterHub"
+CenterHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+CenterHub.TextSize = 44.000
+CenterHub.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Achitsak/CENTER-HUB/main/Blox%20Fruits"))()
+end)
+
 
 XenonHub.Name = "XenonHub"
 XenonHub.Parent = main
@@ -59,14 +59,24 @@ XenonHub.Text = "XenonHub V 1.5"
 XenonHub.TextColor3 = Color3.fromRGB(5, 243, 255)
 XenonHub.TextSize = 31.000
 XenonHub.MouseButton1Click:connect(function()
-    _G.Keys = "Q8LPB-HFQ71-0E23F"
-    _G.Color = Color3.fromRGB(235, 64, 52)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua"))();
+	_G.Keys = "Q8LPB-HFQ71-0E23F"
+	_G.Color = Color3.fromRGB(235, 64, 52)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua"))();
 end)
+
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.358757079, 0, 0.543417394, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "ComingSoon"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
 
 TextButton_2.Parent = main
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.Position = UDim2.new(0.358757079, 0, 0.543417394, 0)
+TextButton_2.Position = UDim2.new(0.036723163, 0, 0.543417394, 0)
 TextButton_2.Size = UDim2.new(0, 200, 0, 50)
 TextButton_2.Font = Enum.Font.SourceSansBold
 TextButton_2.Text = "ComingSoon"
@@ -75,52 +85,46 @@ TextButton_2.TextSize = 14.000
 
 TextButton_3.Parent = main
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.Position = UDim2.new(0.036723163, 0, 0.543417394, 0)
+TextButton_3.Position = UDim2.new(0.687853098, 0, 0.543417394, 0)
 TextButton_3.Size = UDim2.new(0, 200, 0, 50)
 TextButton_3.Font = Enum.Font.SourceSansBold
 TextButton_3.Text = "ComingSoon"
 TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextSize = 14.000
 
-TextButton_4.Parent = main
-TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_4.Position = UDim2.new(0.687853098, 0, 0.543417394, 0)
-TextButton_4.Size = UDim2.new(0, 200, 0, 50)
-TextButton_4.Font = Enum.Font.SourceSansBold
-TextButton_4.Text = "ComingSoon"
-TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.TextSize = 14.000
+SwordHub.Name = "SwordHub"
+SwordHub.Parent = main
+SwordHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SwordHub.Position = UDim2.new(0.687853098, 0, 0.207282916, 0)
+SwordHub.Size = UDim2.new(0, 200, 0, 50)
+SwordHub.Font = Enum.Font.SourceSansBold
+SwordHub.Text = "SwordHub"
+SwordHub.TextColor3 = Color3.fromRGB(255, 0, 4)
+SwordHub.TextSize = 46.000
+SwordHub.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
 
-TextButton_5.Parent = main
-TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.Position = UDim2.new(0.687853098, 0, 0.207282916, 0)
-TextButton_5.Size = UDim2.new(0, 200, 0, 50)
-TextButton_5.Font = Enum.Font.SourceSansBold
-TextButton_5.Text = "ComingSoon"
-TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.TextSize = 14.000
-
-TextButton_6.Parent = main
-TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_6.Position = UDim2.new(0.922316372, 0, 0, 0)
-TextButton_6.Size = UDim2.new(0, 55, 0, 50)
-TextButton_6.Font = Enum.Font.SourceSansBold
-TextButton_6.Text = "X"
-TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.TextSize = 65.000
-TextButton_6.MouseButton1Down:connect(function()
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.Position = UDim2.new(0.922316372, 0, 0, 0)
+Close.Size = UDim2.new(0, 55, 0, 50)
+Close.Font = Enum.Font.SourceSansBold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 65.000
+Close.MouseButton1Down:connect(function()
 	main.Visible = false
 	Openmain.Visible = true
 end)
+
 
 Openmain.Name = "Openmain"
 Openmain.Parent = ScreenGui
 Openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Openmain.Position = UDim2.new(0, 0, 0.431901902, 0)
 Openmain.Size = UDim2.new(0, 182, 0, 57)
-Openmain.Active = true
-Openmain.Draggable = true
-
 
 Open.Name = "Open"
 Open.Parent = Openmain
