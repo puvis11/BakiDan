@@ -75,6 +75,16 @@ Section:NewToggle("Carft All", "IDK", function(state)
     end
 end)
 
+local Tab = Window:NewTab("Equip Best")
+local Section = Tab:NewSection("Equip Best")
+
+Section:NewButton("Equip Best", "Equip Best", function()
+    local A_1 = true
+    local Event = game:GetService("ReplicatedStorage").Remotes.Events.EquipBest
+    Event:FireServer(A_1)
+end)
+
+
 function dotap()
     spawn(function()
         while autotap == true do
@@ -154,6 +164,8 @@ function CraftAll()
         end
     end)
 end
+
+
 
 function getCurrentPlayersPDS()
     local plyr = game.Players.LocalPlayer;
