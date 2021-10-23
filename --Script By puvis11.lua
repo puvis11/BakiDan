@@ -5,6 +5,8 @@ getgenv().buyegg = false;
 getgenv().thisvalue = 'myname';
 getgenv().buyeggCandy = false;
 getgenv().CraftAll = false;
+getgenv().buyeggSkelly = false;
+
 local remotePatch = game:GetService("ReplicatedStorage")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -52,6 +54,15 @@ Section:NewToggle("AutoBuy Candy Egg", "You need to unlock HaloweenWorld", funct
         buyeggCandy()
     end
 end)
+
+Section:NewToggle("AutoBuy Skelly Egg", "You need to unlock HaloweenWorld", function(state)
+    getgenv().buyeggSkelly = state
+    print('Auto Tap is: ', state);
+    if state then
+        buyeggSkelly()
+    end
+end)
+
 
 local Tab = Window:NewTab("Carft All")
 local Section = Tab:NewSection("Carft All")
@@ -117,6 +128,21 @@ function buyeggCandy()
         end
     end)
 end
+
+function buyeggSkelly()
+    spawn(function()
+        while wait() do
+            if not getgenv().buyeggSkelly then break end;
+            local A_1 = "Skelly Egg"
+            local A_2 = 1
+            local A_3 = true
+            local Event = game:GetService("ReplicatedStorage").Remotes.Events.PurchaseEgg
+            Event:FireServer(A_1, A_2, A_3)
+            wait()
+        end
+    end)
+end
+
 
 function CraftAll()
     spawn(function()
