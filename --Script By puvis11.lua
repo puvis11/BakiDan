@@ -448,7 +448,7 @@ local Section = Tab:NewSection("World HeroAcademia(ComingSoon)")
 
 local Section = Tab:NewSection("World JujutsuKaisen")
 
-Section:NewToggle("AutoBuy SaoUltra Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By Puvis11", function(state)
     getgenv().buyJujutsuEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -752,7 +752,7 @@ function buyJujutsuEgg()
         Event:FireServer(A_1)
         while wait() do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-949.19928, 29.5339298, -4529.97656, -0.998769462, -2.43435982e-09, 0.0495949835, -1.44627677e-09, 1, 1.99589287e-08, -0.0495949835, 1.98626395e-08, -0.998769462)
-            if not getgenv().buySaoUltraEgg then break end;
+            if not getgenv().buyJujutsuEgg then break end;
             local A_1 = "Jujutsu Egg"
             local A_2 = 1
             local A_3 = true
