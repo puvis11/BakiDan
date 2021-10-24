@@ -444,9 +444,19 @@ Section:NewToggle("AutoBuy SaoUltra Egg", "Credit By Puvis11", function(state)
     end
 end)
 
-local Section = Tab:NewSection("World HeroAcademia(ComingSoon)")
+local Section = Tab:NewSection("World MyHeroAcademia")
+
+
+Section:NewToggle("AutoBuy MyHeroAcademiaHerosEgg", "Credit By Puvis11", function(state)
+    getgenv().buyMyHeroAcademiaHerosEgg = state
+    print('Auto Tap is: ', state);
+    if state then
+        buyMyHeroAcademiaHerosEgg()
+    end
+end)
 
 local Section = Tab:NewSection("World JujutsuKaisen")
+
 
 Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By Puvis11", function(state)
     getgenv().buyJujutsuEgg = state
@@ -744,6 +754,25 @@ function buySaoUltraEgg()
         end
     end)
 end
+
+function buyMyHeroAcademiaHerosEgg()
+    spawn(function()
+        local A_1 = "MyHeroAcademia"
+        local Event = game:GetService("ReplicatedStorage").Remotes.Events.WorldRemote
+        Event:FireServer(A_1)
+        while wait() do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4673.62646, 137.187302, -2478.29956, 0.00253498554, 2.47384619e-08, 0.999996364, 4.74435113e-09, 1, -2.47505767e-08, -0.999996364, 4.80706897e-09, 0.00253498554)
+            if not getgenv().buyMyHeroAcademiaHerosEgg then break end;
+            local A_1 = "My Hero Academia Heros Egg"
+            local A_2 = 1
+            local A_3 = true
+            local Event = game:GetService("ReplicatedStorage").Remotes.Events.PurchaseEgg
+            Event:FireServer(A_1, A_2, A_3)
+            wait()
+        end
+    end)
+end
+
 
 function buyJujutsuEgg()
     spawn(function()
