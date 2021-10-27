@@ -1,4 +1,4 @@
---Script By puvis11
+--Script By BakiDan
 getgenv().autorebirth1 = false;
 getgenv().autorebirth2 = false;
 getgenv().autorebirth3 = false;
@@ -50,7 +50,7 @@ getgenv().buyJujutsuEgg = false;
 local remotePatch = game:GetService("ReplicatedStorage")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Anime Tapper By puvis11", "DarkTheme")
+local Window = Library.CreateLib("Anime Tapper By BakiDan", "DarkTheme")
 local Tab = Window:NewTab("Farming")
 local Section = Tab:NewSection("AutoTap")
 
@@ -65,7 +65,7 @@ end)
 
 local Section = Tab:NewSection("AutoRebirth")
 
-Section:NewToggle("AutoRebirth 1", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 1", "Credit By BakiDan", function(state)
     getgenv().autorebirth1 = state
     print('Auto Tap is: ', state);
     if state then
@@ -73,7 +73,7 @@ Section:NewToggle("AutoRebirth 1", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 5", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 5", "Credit By BakiDan", function(state)
     getgenv().autorebirth2 = state
     print('Auto Tap is: ', state);
     if state then
@@ -81,7 +81,7 @@ Section:NewToggle("AutoRebirth 5", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 25", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 25", "Credit By BakiDan", function(state)
     getgenv().autorebirth3 = state
     print('Auto Tap is: ', state);
     if state then
@@ -89,7 +89,7 @@ Section:NewToggle("AutoRebirth 25", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 50", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 50", "Credit By BakiDan", function(state)
     getgenv().autorebirth4 = state
     print('Auto Tap is: ', state);
     if state then
@@ -97,7 +97,7 @@ Section:NewToggle("AutoRebirth 50", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 150", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 150", "Credit By BakiDan", function(state)
     getgenv().autorebirth5 = state
     print('Auto Tap is: ', state);
     if state then
@@ -105,7 +105,7 @@ Section:NewToggle("AutoRebirth 150", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 500", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 500", "Credit By BakiDan", function(state)
     getgenv().autorebirth6 = state
     print('Auto Tap is: ', state);
     if state then
@@ -113,7 +113,7 @@ Section:NewToggle("AutoRebirth 500", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 1000", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 1000", "Credit By BakiDan", function(state)
     getgenv().autorebirth7 = state
     print('Auto Tap is: ', state);
     if state then
@@ -121,7 +121,7 @@ Section:NewToggle("AutoRebirth 1000", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 2500", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 2500", "Credit By BakiDan", function(state)
     getgenv().autorebirth8 = state
     print('Auto Tap is: ', state);
     if state then
@@ -129,7 +129,7 @@ Section:NewToggle("AutoRebirth 2500", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 10K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 10K", "Credit By BakiDan", function(state)
     getgenv().autorebirth9 = state
     print('Auto Tap is: ', state);
     if state then
@@ -137,7 +137,7 @@ Section:NewToggle("AutoRebirth 10K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 25K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 25K", "Credit By BakiDan", function(state)
     getgenv().autorebirth10 = state
     print('Auto Tap is: ', state);
     if state then
@@ -145,7 +145,7 @@ Section:NewToggle("AutoRebirth 25K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 50K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 50K", "Credit By BakiDan", function(state)
     getgenv().autorebirth11 = state
     print('Auto Tap is: ', state);
     if state then
@@ -153,7 +153,7 @@ Section:NewToggle("AutoRebirth 50K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 100K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 100K", "Credit By BakiDan", function(state)
     getgenv().autorebirth12 = state
     print('Auto Tap is: ', state);
     if state then
@@ -161,7 +161,7 @@ Section:NewToggle("AutoRebirth 100K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 250K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 250K", "Credit By BakiDan", function(state)
     getgenv().autorebirth13 = state
     print('Auto Tap is: ', state);
     if state then
@@ -169,7 +169,7 @@ Section:NewToggle("AutoRebirth 250K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 500K", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 500K", "Credit By BakiDan", function(state)
     getgenv().autorebirth14 = state
     print('Auto Tap is: ', state);
     if state then
@@ -177,7 +177,7 @@ Section:NewToggle("AutoRebirth 500K", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 1M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 1M", "Credit By BakiDan", function(state)
     getgenv().autorebirth15 = state
     print('Auto Tap is: ', state);
     if state then
@@ -185,7 +185,7 @@ Section:NewToggle("AutoRebirth 1M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 5M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 5M", "Credit By BakiDan", function(state)
     getgenv().autorebirth16 = state
     print('Auto Tap is: ', state);
     if state then
@@ -193,7 +193,7 @@ Section:NewToggle("AutoRebirth 5M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 10M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 10M", "Credit By BakiDan", function(state)
     getgenv().autorebirth17 = state
     print('Auto Tap is: ', state);
     if state then
@@ -201,7 +201,7 @@ Section:NewToggle("AutoRebirth 10M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 50M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 50M", "Credit By BakiDan", function(state)
     getgenv().autorebirth18 = state
     print('Auto Tap is: ', state);
     if state then
@@ -209,7 +209,7 @@ Section:NewToggle("AutoRebirth 50M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 100M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 100M", "Credit By BakiDan", function(state)
     getgenv().autorebirth19 = state
     print('Auto Tap is: ', state);
     if state then
@@ -217,7 +217,7 @@ Section:NewToggle("AutoRebirth 100M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 250M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 250M", "Credit By BakiDan", function(state)
     getgenv().autorebirth20 = state
     print('Auto Tap is: ', state);
     if state then
@@ -225,7 +225,7 @@ Section:NewToggle("AutoRebirth 250M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 750M", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 750M", "Credit By BakiDan", function(state)
     getgenv().autorebirth21 = state
     print('Auto Tap is: ', state);
     if state then
@@ -233,7 +233,7 @@ Section:NewToggle("AutoRebirth 750M", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 2B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 2B", "Credit By BakiDan", function(state)
     getgenv().autorebirth22 = state
     print('Auto Tap is: ', state);
     if state then
@@ -241,7 +241,7 @@ Section:NewToggle("AutoRebirth 2B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 5B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 5B", "Credit By BakiDan", function(state)
     getgenv().autorebirth23 = state
     print('Auto Tap is: ', state);
     if state then
@@ -249,7 +249,7 @@ Section:NewToggle("AutoRebirth 5B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 10B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 10B", "Credit By BakiDan", function(state)
     getgenv().autorebirth24 = state
     print('Auto Tap is: ', state);
     if state then
@@ -257,7 +257,7 @@ Section:NewToggle("AutoRebirth 10B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 25B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 25B", "Credit By BakiDan", function(state)
     getgenv().autorebirth25 = state
     print('Auto Tap is: ', state);
     if state then
@@ -265,7 +265,7 @@ Section:NewToggle("AutoRebirth 25B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 50B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 50B", "Credit By BakiDan", function(state)
     getgenv().autorebirth26 = state
     print('Auto Tap is: ', state);
     if state then
@@ -273,7 +273,7 @@ Section:NewToggle("AutoRebirth 50B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 100B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 100B", "Credit By BakiDan", function(state)
     getgenv().autorebirth27 = state
     print('Auto Tap is: ', state);
     if state then
@@ -281,7 +281,7 @@ Section:NewToggle("AutoRebirth 100B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 250B", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 250B", "Credit By BakiDan", function(state)
     getgenv().autorebirth28 = state
     print('Auto Tap is: ', state);
     if state then
@@ -289,7 +289,7 @@ Section:NewToggle("AutoRebirth 250B", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 1T", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 1T", "Credit By BakiDan", function(state)
     getgenv().autorebirth29 = state
     print('Auto Tap is: ', state);
     if state then
@@ -297,7 +297,7 @@ Section:NewToggle("AutoRebirth 1T", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoRebirth 5T", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoRebirth 5T", "Credit By BakiDan", function(state)
     getgenv().autorebirth30 = state
     print('Auto Tap is: ', state);
     if state then
@@ -343,7 +343,7 @@ end)
 
 local Section = Tab:NewSection("World Halloween")
 
-Section:NewToggle("AutoBuy Candy Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Candy Egg", "Credit By BakiDan", function(state)
     getgenv().buyeggCandy = state
     print('Auto Tap is: ', state);
     if state then
@@ -351,7 +351,7 @@ Section:NewToggle("AutoBuy Candy Egg", "Credit By Puvis11", function(state)
     end
 end)
 
-Section:NewToggle("AutoBuy Skelly Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Skelly Egg", "Credit By BakiDan", function(state)
     getgenv().buyeggSkelly = state
     print('Auto Tap is: ', state);
     if state then
@@ -360,7 +360,7 @@ Section:NewToggle("AutoBuy Skelly Egg", "Credit By Puvis11", function(state)
 end)
 
 
-Section:NewToggle("AutoBuy Pumkin Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Pumkin Egg", "Credit By BakiDan", function(state)
     getgenv().buyeggPumpkin = state
     print('Auto Tap is: ', state);
     if state then
@@ -395,7 +395,7 @@ local Section = Tab:NewSection("World Naruto")
 
 
 
-Section:NewToggle("AutoBuy Naruto Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Naruto Egg", "Credit By BakiDan", function(state)
     getgenv().buyegg = state
     print('Auto Tap is: ', state);
     if state then
@@ -405,7 +405,7 @@ end)
 
 local Section = Tab:NewSection("World JoJoStand")
 
-Section:NewToggle("AutoBuy JoJoStand Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy JoJoStand Egg", "Credit By BakiDan", function(state)
     getgenv().buyJoJoStandEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -415,7 +415,7 @@ end)
 
 local Section = Tab:NewSection("World Attack On Titan")
 
-Section:NewToggle("AutoBuy Attack On Titan Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Attack On Titan Egg", "Credit By BakiDan", function(state)
     getgenv().buyAttackkOnTitanEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -426,7 +426,7 @@ end)
 
 local Section = Tab:NewSection("World Tokyo")
 
-Section:NewToggle("AutoBuy Tokyo Ghoul Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Tokyo Ghoul Egg", "Credit By BakiDan", function(state)
     getgenv().buyeggTokyoGhoul = state
     print('Auto Tap is: ', state);
     if state then
@@ -436,7 +436,7 @@ end)
 
 local Section = Tab:NewSection("World Sword Art Online")
 
-Section:NewToggle("AutoBuy SaoUltra Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy SaoUltra Egg", "Credit By BakiDan", function(state)
     getgenv().buySaoUltraEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -447,7 +447,7 @@ end)
 local Section = Tab:NewSection("World MyHeroAcademia")
 
 
-Section:NewToggle("AutoBuy MyHeroAcademiaHerosEgg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy MyHeroAcademiaHerosEgg", "Credit By BakiDan", function(state)
     getgenv().buyMyHeroAcademiaHerosEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -458,7 +458,7 @@ end)
 local Section = Tab:NewSection("World JujutsuKaisen")
 
 
-Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By Puvis11", function(state)
+Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By BakiDan", function(state)
     getgenv().buyJujutsuEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -819,7 +819,7 @@ local Section = Tab:NewSection("Teleport")
 
 local selectedWorld
 
-Section:NewDropdown("Teleport Selected", "Credit puvis11", {"Naruto", "DemonSlayer", "TokyoGhoul", "AttackOnTitans", "JujutsuKaisen", "SwordArtOnline", "Halloween", "OnePiece", "JoJoStand", "MyHeroAcademia", "StarterWorld", "VIP"}, function(value)
+Section:NewDropdown("Teleport Selected", "Credit BakiDan", {"Naruto", "DemonSlayer", "TokyoGhoul", "AttackOnTitans", "JujutsuKaisen", "SwordArtOnline", "Halloween", "OnePiece", "JoJoStand", "MyHeroAcademia", "StarterWorld", "VIP"}, function(value)
     selectedWorld = value
     print(value)
 end)
