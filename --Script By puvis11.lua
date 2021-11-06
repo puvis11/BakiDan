@@ -46,7 +46,7 @@ getgenv().buyOnePieceEgg = false;
 getgenv().buyMyHeroAcademiaHerosEgg = false;
 getgenv().buySaoUltraEgg = false;
 getgenv().buyJujutsuEgg = false;
-
+getgenv().buyGoblinSlayerEgg = false;
 local remotePatch = game:GetService("ReplicatedStorage")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -466,6 +466,13 @@ Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By BakiDan", function(state)
     end
 end)
 
+local Section = Tab:NewSection("World Goblin Slayer")
+    getgenv().buyGoblinSlayerEgg = state
+    print('Auto Tap is: ', state);
+    if state then
+        buyGoblinSlayerEgg()
+    end
+end)
 
 local Tab = Window:NewTab("Carft All")
 local Section = Tab:NewSection("Carft All")
@@ -791,6 +798,47 @@ function buyJujutsuEgg()
         end
     end)
 end
+
+function buyJujutsuEgg()
+    spawn(function()
+        local A_1 = "JujutsuKaisen"
+        local Event = game:GetService("ReplicatedStorage").Remotes.Events.WorldRemote
+        Event:FireServer(A_1)
+        while wait() do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-949.19928, 29.5339298, -4529.97656, -0.998769462, -2.43435982e-09, 0.0495949835, -1.44627677e-09, 1, 1.99589287e-08, -0.0495949835, 1.98626395e-08, -0.998769462)
+            if not getgenv().buyJujutsuEgg then break end;
+            local A_1 = "Jujutsu Egg"
+            local A_2 = 1
+            local A_3 = true
+            local Event = game:GetService("ReplicatedStorage").Remotes.Events.PurchaseEgg
+            Event:FireServer(A_1, A_2, A_3)
+            wait()
+        end
+    end)
+end
+
+function buyGoblinSlayerEgg()
+    spawn(function()
+
+        local A_1 = "GoblinSlayer"
+        local Event = game:GetService("ReplicatedStorage").Remotes.Events.WorldRemote
+        Event:FireServer(A_1)
+        while wait() do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2224.23511, 28.5759296, 1062.4751, 0.0117612081, 0.0340076052, 0.999352396, -0.000491824991, 0.999421597, -0.0340041704, -0.999930739, -9.15763449e-05, 0.0117711313)
+            if not getgenv().buyJujutsuEgg then break end;
+            local A_1 = "Goblin Slayer Egg"
+            local A_2 = 1
+            local A_3 = true
+            local Event = game:GetService("ReplicatedStorage").Remotes.Events.PurchaseEgg
+            Event:FireServer(A_1, A_2, A_3)
+            wait()
+        end
+    end)
+end
+
+
+
+
 
 
 function CraftAll()
