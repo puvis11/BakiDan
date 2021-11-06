@@ -467,6 +467,8 @@ Section:NewToggle("AutoBuy Jujutsu Egg", "Credit By BakiDan", function(state)
 end)
 
 local Section = Tab:NewSection("World Goblin Slayer")
+
+Section:NewToggle("AutoBuy Goblin Slayer Egg", "Credit By BakiDan", function(state)
     getgenv().buyGoblinSlayerEgg = state
     print('Auto Tap is: ', state);
     if state then
@@ -493,6 +495,38 @@ Section:NewButton("Equip Best", "Equip Best", function()
     local Event = game:GetService("ReplicatedStorage").Remotes.Events.EquipBest
     Event:FireServer(A_1)
 end)
+
+
+getgenv().YenTeleport = false
+
+local Tab = Window:NewTab("Yen")
+local Section = Tab:NewSection("AutoYen")
+
+local selectedYen
+
+Section:NewDropdown("Teleport Selected", "Credit BakiDan", {"Naruto", "DemonSlayer", "TokyoGhoul", "AttackOnTitans", "JujutsuKaisen", "SwordArtOnline", "Halloween", "OnePiece", "JoJoStand", "MyHeroAcademia", "StarterYenselectedYen", "VIP", "GoblinSlayer"}, function(value)
+    selectedYen = value
+    print(value)
+end)
+
+Section:NewToggle("Auto Yen", "AutoYen", function(state)
+    getgenv().YenTeleport = state
+    print('Auto Tap is: ', state);
+    if state and selectedYen then
+        YenTeleport(selectedYen)
+    end
+end)
+
+
+function YenTeleport(NameYenselectedYen)
+    spawn(function()
+        while getgenv().YenTeleport == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Worlds[NameYenselectedYen].Yen.GEMERALD.HumanoidRootPart.CFrame
+            wait(1)
+        end
+    end)
+end
+
 
 
 function dotap()
@@ -825,7 +859,7 @@ function buyGoblinSlayerEgg()
         Event:FireServer(A_1)
         while wait() do
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2224.23511, 28.5759296, 1062.4751, 0.0117612081, 0.0340076052, 0.999352396, -0.000491824991, 0.999421597, -0.0340041704, -0.999930739, -9.15763449e-05, 0.0117711313)
-            if not getgenv().buyJujutsuEgg then break end;
+            if not getgenv().buyGoblinSlayerEgg then break end;
             local A_1 = "Goblin Slayer Egg"
             local A_2 = 1
             local A_3 = true
