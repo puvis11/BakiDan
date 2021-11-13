@@ -47,6 +47,9 @@ getgenv().buyMyHeroAcademiaHerosEgg = false;
 getgenv().buySaoUltraEgg = false;
 getgenv().buyJujutsuEgg = false;
 getgenv().buyGoblinSlayerEgg = false;
+getgenv().buyBlackCoverEgg = false;
+
+
 local remotePatch = game:GetService("ReplicatedStorage")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -476,6 +479,16 @@ Section:NewToggle("AutoBuy Goblin Slayer Egg", "Credit By BakiDan", function(sta
     end
 end)
 
+local Section = Tab:NewSection("World Goblin Slayer")
+
+Section:NewToggle("AutoBuy White Slayer", "Credit By BakiDan", function(state)
+    getgenv().buyBlackCoverEgg = state
+    print('Auto Tap is: ', state);
+    if state then
+        buyBlackCoverEgg()
+    end
+end)
+
 local Tab = Window:NewTab("Carft All")
 local Section = Tab:NewSection("Carft All")
 
@@ -518,14 +531,46 @@ Section:NewToggle("Auto Yen", "AutoYen", function(state)
 end)
 
 
-function YenTeleport(NameYenselectedYen)
+getgenv().AutoRebirthV2 = false
+local selectedRebirth
+
+
+local Tab = Window:NewTab("AutoRebirthV2")
+local Section = Tab:NewSection("AutoRebirthV2")
+
+Section:NewDropdown("Teleport Selected", "Credit BakiDan", {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 , 20, 21, 22, 23, 24, 25}, function(value)
+    selectedRebirth = value
+    print(value)
+end)
+
+
+
+Section:NewToggle("Auto Yen", "AutoYen", function(state)
+    getgenv().AutoRebirthV2 = state
+    print('Auto Tap is: ', state);
+    if state and selectedRebirth then
+        AutoRebirthV2(selectedRebirth)
+    end
+end)
+
+
+
+
+
+
+function AutoRebirthV2(RebirthNumber)
     spawn(function()
-        while getgenv().YenTeleport == true do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Worlds[NameYenselectedYen].Yen.GEMERALD.HumanoidRootPart.CFrame
-            wait(1)
+        while getgenv().AutoRebirthV2 == true do
+            local A_1 = RebirthNumber
+            local Event = game:GetService("ReplicatedStorage").Remotes.Events.Rebirth
+            Event:FireServer(A_1)
+            wait()
         end
     end)
 end
+
+
+
 
 
 
@@ -833,15 +878,15 @@ function buyJujutsuEgg()
     end)
 end
 
-function buyJujutsuEgg()
+function buyBlackCoverEgg()
     spawn(function()
-        local A_1 = "JujutsuKaisen"
+        local A_1 = "WhiteClover"
         local Event = game:GetService("ReplicatedStorage").Remotes.Events.WorldRemote
         Event:FireServer(A_1)
         while wait() do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-949.19928, 29.5339298, -4529.97656, -0.998769462, -2.43435982e-09, 0.0495949835, -1.44627677e-09, 1, 1.99589287e-08, -0.0495949835, 1.98626395e-08, -0.998769462)
-            if not getgenv().buyJujutsuEgg then break end;
-            local A_1 = "Jujutsu Egg"
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1323.00696, -9.77183437, 62.6996307, 0.990984082, 1.50757717e-08, 0.133979827, -2.49680401e-08, 1, 7.21538029e-08, -0.133979827, -7.48484794e-08, 0.990984082)
+            if not getgenv().buyBlackCoverEgg then break end;
+            local A_1 = "White Clover Egg"
             local A_2 = 1
             local A_3 = true
             local Event = game:GetService("ReplicatedStorage").Remotes.Events.PurchaseEgg
@@ -851,9 +896,9 @@ function buyJujutsuEgg()
     end)
 end
 
+
 function buyGoblinSlayerEgg()
     spawn(function()
-
         local A_1 = "GoblinSlayer"
         local Event = game:GetService("ReplicatedStorage").Remotes.Events.WorldRemote
         Event:FireServer(A_1)
@@ -869,7 +914,6 @@ function buyGoblinSlayerEgg()
         end
     end)
 end
-
 
 
 
